@@ -5,6 +5,48 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne = {
+    title: 'Article One | Krishna',
+    heading: 'Article One',
+    date: 'Sep 2 2017',
+    content: ` <p>
+                    This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!
+                </p>
+                <p>
+                    This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!
+                </p>
+                <p>
+                    This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!This is Paragraph one... Be HUMBLE, Sit down Bitch!!
+                </p>`
+};
+
+var HtmlTemplate = `
+
+        <html>
+            <head>
+                <title>
+                    ${title}
+                </title>
+                <link href="/ui/style.css" rel="stylesheet" />
+            </head>
+            <body>
+                <div class="container">
+                    <a href='/'>Home</a>
+                    <hr/>
+                    <h3>${heading}</h3>
+                    <div>
+                      ${date}
+                    </div>
+                    <div>
+                      ${content}
+                    </div>
+                </div>
+            </body>
+        </html>
+
+
+`;
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
