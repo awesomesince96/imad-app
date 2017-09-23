@@ -82,6 +82,10 @@ app.get('/counter',function(req, res){
     res.send(counter.toString());
 });
 
+ap.get('/ui/main.js',function(req,res){
+   res.sendFile(path.join(__dirname,'ui','main.js'));
+});
+
 app.get('/:articleName',function(req,res){
     //articleName == article-one, article-two
     //articles([articleName]) == [] content object of article one
