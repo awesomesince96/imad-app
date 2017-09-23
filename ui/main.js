@@ -1,6 +1,6 @@
-var button = document.getElementById('counter');
+var button1 = document.getElementById('counter');
 
-button.onClick = function(){
+button1.onClick = function(){
     console.log('button is clicked');
     alert('hey');
     // Create a request object
