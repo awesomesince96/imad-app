@@ -1,6 +1,9 @@
-var button1 = document.getElementById('counter');
+var button = document.getElementById('counter');
 
-button1.onClick = function(){
+button.onClick = function(){
+    alert('hey');
+}
+button.onClick = function(){
     console.log('button is clicked');
     alert('hey');
     // Create a request object
@@ -12,8 +15,8 @@ button1.onClick = function(){
                                                             // Take some actions
             if(request.status === 200 ){                    // Now check if the request made was an successfull one
                 var counter = request.responseText;         // responseText gives access to response value
-                var count = document.getElementById('count');
-                count.innerHTML = counter.toString();
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();
             }
                                                             // if not done yet do here
         }
