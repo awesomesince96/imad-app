@@ -1,5 +1,5 @@
 var button = document.getElementById('counter');
-
+alert('hey');
 button.onClick = function(){
     console.log('button is clicked');
     // Create a request object
