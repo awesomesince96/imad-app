@@ -1,9 +1,6 @@
 var button = document.getElementById('counter');
 
 button.onClick = function(){
-    alert('hey');
-}
-button.onClick = function(){
     console.log('button is clicked');
     alert('hey');
     // Create a request object
@@ -25,4 +22,4 @@ button.onClick = function(){
      // Make a request to counter endpoint
      request.open('GET','http://krishna7902.imad.hasura-app.io/counter',true);
      request.send(null);
-}
+};
